@@ -28,11 +28,15 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+    - `Counter1` encapsulates the `count` variable within its functional scope. Each time the function is called, the `count` is reset to 0.
+    - `Counter2` must reach outside its functional scope to access the `count` variable. In this example, the `count` variable will continue counting without ever resetting.
+
   2. Which of the two uses a closure? How can you tell?
-  
+    - `Counter2 `uses a closure because it reaches outside its functional scope to access the `count` variable
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     - Counter1 would be preferable in a case where the counter needs to reset every single time. To use similar examples, we can use a amusement park ride. We want to keep track of how many times the ride completed an operation for each time it is ran. With counter 1, we would reset the counter with each run.
+     - Counter2 would be great with keeping track of how many people rode the ride each day. With each ride, the counter would continue to increase.
 */
 
 // counter1 code
